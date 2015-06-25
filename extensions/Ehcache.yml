@@ -1,0 +1,8 @@
+name: Ehcache
+version: 1.0
+enabled: true
+jmx:
+  - object_name: net.sf.ehcache:type=CacheStatistics,CacheManager=__DEFAULT__,name=*
+    metrics:
+      - attributes: MemoryStoreObjectCount, DiskStoreObjectCount, InMemoryHits, OnDiskHits, InMemoryMisses, OnDiskMisses, CacheMissPercentage, InMemoryHitPercentage, OnDiskHitPercentage
+        type: simple
